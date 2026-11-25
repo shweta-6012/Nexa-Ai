@@ -1,6 +1,8 @@
 # Nexa-Ai 🤖
 ### Your AI-Powered Conversational Assistant
 
+🔗 Live Demo: https://nexa-ai-2-nzjm.onrender.com/
+
 Nexa-Ai is an intelligent web-based assistant developed using **Python, Flask, and Generative AI**. It provides an interactive chat experience, allowing users to communicate with an AI model and interact with PDF documents through a simple web interface.
 
 ## Overview
