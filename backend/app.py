@@ -66,11 +66,8 @@ Message:
 """
         )
 
-        with smtplib.SMTP_SSL("smtp.gmail.com", 465) as smtp:
-            smtp.login(
-                os.environ["MAIL_USERNAME"],
-                os.environ["MAIL_PASSWORD"]
-            )
+       with smtplib.SMTP_SSL("smtp.gmail.com", 465, timeout=15) as smtp:
+            smtp.login(os.environ["MAIL_USERNAME"], os.environ["MAIL_PASSWORD"])
             smtp.send_message(msg)
 
         return """
