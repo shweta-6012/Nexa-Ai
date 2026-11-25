@@ -38,6 +38,7 @@ def home():
 def chatbot():
     return send_from_directory(FRONTEND_DIR, "chatbot.html")
 
+
 @app.route("/contact", methods=["POST"])
 def contact():
     name = request.form.get("name", "").strip()
@@ -49,7 +50,6 @@ def contact():
 
     try:
         msg = EmailMessage()
-
         msg["Subject"] = f"NexaAI Contact Message from {name}"
         msg["From"] = os.environ["MAIL_USERNAME"]
         msg["To"] = os.environ["OWNER_EMAIL"]
@@ -66,8 +66,11 @@ Message:
 """
         )
 
-       with smtplib.SMTP_SSL("smtp.gmail.com", 465, timeout=15) as smtp:
-            smtp.login(os.environ["MAIL_USERNAME"], os.environ["MAIL_PASSWORD"])
+        with smtplib.SMTP_SSL("smtp.gmail.com", 465, timeout=15) as smtp:
+            smtp.login(
+                os.environ["MAIL_USERNAME"],
+                os.environ["MAIL_PASSWORD"]
+            )
             smtp.send_message(msg)
 
         return """
