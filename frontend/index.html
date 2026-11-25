@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NexaAI | Medical AI Assistant</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar">
+
+        <h2 class="logo">
+            <span class="medical">NEXA</span>
+            <span class="ai">AI</span>
+        </h2>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#features">Features</a></li>
+            <!-- <li><a href="#uploadreport">Upload Report</a></li> -->
+            <li><a href="#login">Login</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+    </nav>
+
+
+    <!-- HERO SECTION -->
+
+    <section class="hero">
+
+        <canvas id="aiParticles"></canvas>
+
+        <div class="hero-content">
+
+            <span class="hero-badge">
+                <i class="fa-solid fa-heart-pulse"></i>
+                AI POWERED MEDICAL ASSISTANT
+            </span>
+
+            <h1>
+                WELCOME TO NEXA <span>AI</span>
+            </h1>
+
+            <h2>Your Medical AI Assistant</h2>
+
+            <p>
+                Understand your medical reports, explore laboratory results,
+                and get clear explanations with the power of Artificial Intelligence.
+            </p>
+
+            <button id="startChatBtn">
+                Start Chat
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- HOME SECTION -->
+
+    <section id="home" class="home-section">
+
+        <div class="home-content">
+
+            <div class="home-text">
+
+                <span class="section-tag">YOUR ASSISTANT NEXA AI</span>
+
+                <h1>
+                    Understand Your Health Reports
+                    <span>With Confidence</span>
+                </h1>
+
+                <p>
+                    Medical reports often contain complex terminology and
+                    technical values. NexaAI helps simplify this information
+                    by providing clear, structured, and easy-to-understand
+                    explanations of your laboratory results.
+                </p>
+
+                <p>
+                    Upload your medical report, explore your test results,
+                    and ask questions to better understand the information
+                    in your report.
+                </p>
+
+                <a href="#startChatBtn" class="primary-btn">
+                    Analyze Your Report
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+            <div class="home-card">
+
+                <div class="home-card-icon">
+                    <i class="fa-solid fa-file-medical"></i>
+                </div>
+
+                <h3>Your Reports, Made Easier</h3>
+
+                <div class="home-card-item">
+                    <i class="fa-solid fa-circle-check"></i>
+                    Easy-to-understand explanations
+                </div>
+
+                <div class="home-card-item">
+                    <i class="fa-solid fa-circle-check"></i>
+                    Laboratory result interpretation
+                </div>
+
+                <div class="home-card-item">
+                    <i class="fa-solid fa-circle-check"></i>
+                    AI-powered report assistance
+                </div>
+
+                <div class="home-card-item">
+                    <i class="fa-solid fa-circle-check"></i>
+                    Patient-friendly information
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FEATURES SECTION -->
+
+    <section id="features" class="features-section">
+
+        <div class="section-heading">
+
+            <span class="section-tag">OUR FEATURES</span>
+
+            <h2>Smart Features for Better Health Understanding</h2>
+
+            <p>
+                Explore the tools that make understanding medical
+                reports simpler and more convenient.
+            </p>
+
+        </div>
+
+        <div class="features-grid">
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+                    <i class="fa-solid fa-file-pdf"></i>
+                </div>
+
+                <h3>PDF Report Upload</h3>
+
+                <p>
+                    Upload your medical laboratory reports in PDF format
+                    for AI-assisted analysis.
+                </p>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+                    <i class="fa-solid fa-microscope"></i>
+                </div>
+
+                <h3>Detailed Report Analysis</h3>
+
+                <p>
+                    Explore test names, measured values, units,
+                    and available reference ranges.
+                </p>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+                    <i class="fa-solid fa-chart-line"></i>
+                </div>
+
+                <h3>Result Interpretation</h3>
+
+                <p>
+                    Understand laboratory findings through
+                    simple and structured explanations.
+                </p>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                </div>
+
+                <h3>Abnormal Result Identification</h3>
+
+                <p>
+                    Identify results marked outside the reference
+                    ranges provided by the laboratory.
+                </p>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+                    <i class="fa-solid fa-robot"></i>
+                </div>
+
+                <h3>AI Medical Assistant</h3>
+
+                <p>
+                    Ask questions about your report and receive
+                    explanations based on the available information.
+                </p>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+                    <i class="fa-solid fa-shield-heart"></i>
+                </div>
+
+                <h3>Privacy-Focused Experience</h3>
+
+                <p>
+                    Designed to support responsible handling
+                    of personal medical information.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- LOGIN  SECTION-->
+
+    <!-- AUTHENTICATION SECTION -->
+
+    <section id="login" class="login-section">
+
+        <div class="login-card">
+
+            <div class="login-icon">
+                <i class="fa-solid fa-user-shield"></i>
+            </div>
+
+            <!-- LOGIN FORM -->
+
+            <div id="loginForm">
+
+                <h2>Welcome Back!</h2>
+
+                <p>Login to access your medical reports and AI assistant.</p>
+
+                <form id="loginFormElement">
+
+                    <div class="input-group">
+                        <label>Username or Email</label>
+                        <input type="text" name="username" placeholder="Enter your username or email"
+                            autocomplete="username" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Password</label>
+                        <input type="password" name="password" placeholder="Enter your password"
+                            autocomplete="current-password" required>
+                    </div>
+
+                    <button type="submit" class="primary-btn login-btn">
+                        Login to Your Account
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                </form>
+
+                <div class="auth-switch">
+                    Don't have an account?
+                    <a href="javascript:void(0)" onclick="showRegister()">
+                        Create Account
+                    </a>
+                </div>
+
+            </div>
+
+
+            <!-- REGISTER FORM -->
+
+            <div id="registerForm" style="display:none;">
+
+                <h2>Create Account</h2>
+
+                <p>Join NexaAI and start managing your healthcare journey.</p>
+
+                <form id="registerFormElement">
+                    <div class="input-group">
+                        <label>Full Name</label>
+                        <input type="text" name="fullname" placeholder="Enter your full name" autocomplete="name"
+                            required>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Email Address</label>
+                        <input type="email" name="email" placeholder="Enter your email" autocomplete="email" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Username</label>
+                        <input type="text" name="username" placeholder="Choose a username" autocomplete="username"
+                            required>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Password</label>
+                        <input type="password" name="password" placeholder="Create a strong password"
+                            autocomplete="new-password" minlength="8" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Confirm Password</label>
+                        <input type="password" name="confirm_password" placeholder="Confirm your password"
+                            autocomplete="new-password" minlength="8" required>
+                    </div>
+                    <button type="submit" class="primary-btn login-btn">
+                        Create My Account
+                        <i class="fa-solid fa-user-plus"></i>
+                    </button>
+
+                </form>
+
+                <div class="auth-switch">
+                    Already have an account?
+                    <a href="javascript:void(0)" onclick="showLogin()">
+                        Login Here
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="auth-footer">
+                <i class="fa-solid fa-shield-halved"></i>
+                Your privacy and security matter to us.
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+
+    <!-- CONTACT SECTION -->
+
+    <section id="contact" class="contact-section">
+
+        <div class="section-heading">
+
+            <span class="section-tag">CONTACT US</span>
+
+            <h2>Let's Connect</h2>
+
+            <p>
+                Have questions, feedback, or need assistance?
+                Send us a message.
+            </p>
+
+        </div>
+
+        <div class="contact-container">
+
+            <div class="contact-info">
+
+                <h3>Get in Touch</h3>
+
+                <p>
+                    We are working to make medical information
+                    easier to understand through AI-powered assistance.
+                </p>
+
+                <div class="contact-detail">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>support@nexaai.com</span>
+                </div>
+
+                <div class="contact-detail">
+                    <i class="fa-solid fa-heart-pulse"></i>
+                    <span>NexaAI Medical Assistant</span>
+                </div>
+
+            </div>
+
+
+            <div class="contact-form">
+
+                <form action="/contact" method="POST">
+
+                    <div class="input-group">
+
+                        <label>Your Name</label>
+
+                        <input type="text" name="name" placeholder="Enter your name" required>
+
+                    </div>
+
+                    <div class="input-group">
+
+                        <label>Email Address</label>
+
+                        <input type="email" name="email" placeholder="Enter your email" required>
+
+                    </div>
+
+                    <div class="input-group">
+
+                        <label>Your Message</label>
+
+                        <textarea name="message" placeholder="Write your message..." required></textarea>
+
+                    </div>
+
+                    <button type="submit" class="primary-btn">
+                        Send Message
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+
+        <h2 class="logo">
+            <span class="medical">NEXA</span>
+            <span class="ai">AI</span>
+        </h2>
+
+        <p>
+            Making medical reports easier to understand through AI.
+        </p>
+
+        <div class="footer-links">
+
+            <a href="#home">Home</a>
+            <a href="#features">Features</a>
+            <a href="#login">Login</a>
+            <a href="#contact">Contact</a>
+
+        </div>
+
+        <div class="footer-bottom">
+            © 2026 NexaAI. All Rights Reserved.
+        </div>
+
+        <p class="footer-disclaimer">
+            For educational purposes only. Not a substitute for professional medical advice.
+        </p>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="js/auth.js"></script>
+
+    <script src="js/particle-motion.js"></script>
+
+</body>
+
+</html>

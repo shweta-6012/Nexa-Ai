@@ -1,0 +1,41 @@
+# -------------------------
+# Web application
+# -------------------------
+Flask
+
+# -------------------------
+# Groq API
+# -------------------------
+groq
+python-dotenv
+
+# -------------------------
+# LangChain
+# -------------------------
+langchain
+langchain-core
+langchain-community
+langchain-groq
+langchain-text-splitters
+
+# -------------------------
+# PDF processing
+# -------------------------
+pypdf
+
+# -------------------------
+# Embeddings
+# -------------------------
+sentence-transformers
+langchain-huggingface
+
+# -------------------------
+# Vector Database
+# -------------------------
+chromadb
+langchain-chroma
+
+# -------------------------
+# HTTP / Basic utilities
+# -------------------------
+requests
