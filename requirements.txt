@@ -39,3 +39,5 @@ langchain-chroma
 # HTTP / Basic utilities
 # -------------------------
 requests
+
+gunicorn
