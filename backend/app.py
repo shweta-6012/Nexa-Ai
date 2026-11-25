@@ -1,5 +1,7 @@
 import os
-from flask import Flask, request, jsonify, send_from_directory  
+from flask import Flask, request, jsonify,send_from_directory
+import smtplib
+from email.message import EmailMessage
 from pypdf import PdfReader  
 import pypdf.errors  
 from io import BytesIO
@@ -35,6 +37,57 @@ def home():
 @app.route("/chatbot")
 def chatbot():
     return send_from_directory(FRONTEND_DIR, "chatbot.html")
+
+@app.route("/contact", methods=["POST"])
+def contact():
+    name = request.form.get("name", "").strip()
+    email = request.form.get("email", "").strip()
+    message = request.form.get("message", "").strip()
+
+    if not name or not email or not message:
+        return "Please fill all fields.", 400
+
+    try:
+        msg = EmailMessage()
+
+        msg["Subject"] = f"NexaAI Contact Message from {name}"
+        msg["From"] = os.environ["MAIL_USERNAME"]
+        msg["To"] = os.environ["OWNER_EMAIL"]
+        msg["Reply-To"] = email
+
+        msg.set_content(
+            f"""New message received from NexaAI website.
+
+Name: {name}
+Email: {email}
+
+Message:
+{message}
+"""
+        )
+
+        with smtplib.SMTP_SSL("smtp.gmail.com", 465) as smtp:
+            smtp.login(
+                os.environ["MAIL_USERNAME"],
+                os.environ["MAIL_PASSWORD"]
+            )
+            smtp.send_message(msg)
+
+        return """
+        <script>
+            alert("Message sent successfully!");
+            window.location.href = "/";
+        </script>
+        """
+
+    except Exception as e:
+        print("Email error:", e)
+        return """
+        <script>
+            alert("Unable to send message. Please try again later.");
+            window.location.href = "/";
+        </script>
+        """, 500
 
 
 # Extract PDF text
